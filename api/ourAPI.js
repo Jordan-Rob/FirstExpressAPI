@@ -7,4 +7,12 @@ router.get("/", (request, response) => {
   response.json(customer);
 });
 
+router.get("/:id", (request, response) => {
+  response.json(
+    customer.filter(
+      (singleCustomer) => singleCustomer.id === parseInt(request.params.id)
+    )
+  );
+});
+
 module.exports = router;
