@@ -30,4 +30,12 @@ router.post("/", (request, response) => {
   response.json(customer);
 });
 
+router.put("/:id", (request, response) => {
+  const searchCustomer = customer.some(
+    (singleCustomer) => singleCusomter.id === parseInt(request.params.id)
+  );
+  if (searchCustomer) {
+  }
+});
+
 module.exports = router;
